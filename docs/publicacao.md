@@ -87,14 +87,16 @@ O projeto já tem `render.yaml` pronto.
 
 1. Crie uma conta em <https://render.com> (pode entrar com GitHub).
 2. **New → Blueprint** → selecione o repositório `devtrack`.
-3. O Render lê o `render.yaml` e cria o serviço com build, start, health check e disco.
+3. O Render lê o `render.yaml` e cria o serviço no plano **free**, com build, start, health check e os dados demo.
 4. Confirme. O primeiro deploy leva alguns minutos.
 5. Abra `https://SEU-APP.onrender.com/api/health` e depois a raiz do site.
-6. Teste: login demo → criar card → arrastar → recarregar a página (os dados devem persistir).
+6. Teste: login demo → criar card → arrastar → recarregar a página (os dados persistem enquanto a instância está de pé).
 
-### Se quiser 100% grátis
+> No plano free o SQLite é recriado com os dados demo a cada deploy/restart — perfeito para uma demo pública, mas **deixe isso claro no LinkedIn**: “demo pública, dados podem resetar”.
 
-Remova o bloco `disk` do `render.yaml` e use o plano free. O banco SQLite é recriado com os dados demo a cada deploy — aceitável para demo, mas **deixe isso claro no LinkedIn**: “demo pública, dados podem resetar”.
+### Se quiser persistência real
+
+Troque `plan: free` por `plan: starter` no `render.yaml` e descomente o bloco `disk`. Aí o banco SQLite sobrevive a deploys e restarts.
 
 Alternativa para o front: Vercel + API no Render. Nesse caso configure:
 
