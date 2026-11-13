@@ -1,0 +1,25 @@
+{
+  "name": "devtrack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DevTrack - rastreador de candidaturas de emprego para devs (React + Node + SQLite)",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n api,web -c cyan,magenta \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "npm run dev --workspace @devtrack/server",
+    "dev:web": "npm run dev --workspace @devtrack/web",
+    "build": "npm run build --workspace @devtrack/server && npm run build --workspace @devtrack/web",
+    "start": "npm run start --workspace @devtrack/server",
+    "test": "npm run test --workspace @devtrack/server",
+    "seed": "npm run seed --workspace @devtrack/server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  }
+}
