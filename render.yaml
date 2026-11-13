@@ -1,13 +1,15 @@
 # Blueprint do Render: https://render.com/docs/blueprint-spec
 #
-# O disco persistente exige plano pago (Starter ou superior).
-# Para testar de graca, remova o bloco `disk` e aceite que o banco SQLite
-# e recriado com os dados demo a cada deploy (SEED_DEMO=true).
+# Por padrao usa o plano free: o banco SQLite e recriado com os dados demo
+# (SEED_DEMO=true) a cada deploy/restart. Perfeito para uma demo publica.
+#
+# Para persistir os dados entre deploys (plano pago), troque plan: free por
+# plan: starter e descomente o bloco `disk`.
 services:
   - type: web
     name: devtrack
     runtime: node
-    plan: starter
+    plan: free
     region: oregon
     buildCommand: npm ci && npm run build
     startCommand: npm start
@@ -21,7 +23,7 @@ services:
         generateValue: true
       - key: SEED_DEMO
         value: "true"
-    disk:
-      name: devtrack-data
-      mountPath: /opt/render/project/src/server/data
-      sizeGB: 1
+    # disk:
+    #   name: devtrack-data
+    #   mountPath: /opt/render/project/src/server/data
+    #   sizeGB: 1

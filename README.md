@@ -5,7 +5,7 @@
 Aplicação **full stack** para acompanhar candidaturas de emprego em um kanban, com dashboard de funil, taxa de resposta e alertas de follow-up.
 *Full stack job application tracker built with React, Node.js and TypeScript.*
 
-[![CI](https://github.com/SEU-USUARIO/devtrack/actions/workflows/ci.yml/badge.svg)](https://github.com/SEU-USUARIO/devtrack/actions/workflows/ci.yml)
+[![CI](https://github.com/LeoEnzo/devtrack/actions/workflows/ci.yml/badge.svg)](https://github.com/LeoEnzo/devtrack/actions/workflows/ci.yml)
 ![Node](https://img.shields.io/badge/Node.js-22.13%2B-339933?logo=node.js&logoColor=white)
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178C6?logo=typescript&logoColor=white)
@@ -238,12 +238,13 @@ devtrack/
 
 ## Deploy
 
-### Render (API + front no mesmo serviço)
+### Render (API + front no mesmo serviço) — plano free
 
 1. Suba o repositório no GitHub.
 2. No Render: **New → Blueprint**, aponte para o repositório e confirme o `render.yaml`.
-3. O blueprint já configura build, start, health check, `JWT_SECRET` e um disco de 1 GB para o SQLite.
-4. O disco persistente exige plano **Starter** (pago). No plano free, remova o bloco `disk`: a aplicação funciona, mas o banco é recriado com os dados demo a cada deploy/restart (bom o suficiente para uma demo pública).
+3. O blueprint já configura build, start, health check, `JWT_SECRET` e os dados demo.
+4. No plano free o SQLite é recriado com os dados demo a cada deploy/restart — o suficiente para uma demo pública.
+5. Para persistência real, troque `plan: free` por `plan: starter` e descomente o bloco `disk` do `render.yaml`.
 
 ### Alternativas
 
@@ -265,10 +266,10 @@ devtrack/
 
 ## Autor
 
-**Seu Nome** — *edite esta seção antes de publicar*
+**LeoEnzo** — *edite esta seção antes de publicar*
 
 - LinkedIn: [linkedin.com/in/seu-usuario](https://www.linkedin.com/in/seu-usuario/)
-- GitHub: [github.com/SEU-USUARIO](https://github.com/SEU-USUARIO)
+- GitHub: [github.com/LeoEnzo](https://github.com/LeoEnzo)
 - E-mail: seu@email.com
 
 Se este projeto te ajudou de alguma forma, deixe uma ⭐ — e me chame para conversar sobre vagas, código ou café. ☕
