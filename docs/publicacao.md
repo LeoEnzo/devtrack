@@ -122,7 +122,7 @@ Regras que aumentam alcance:
 - Use de **3 a 5 hashtags**, no fim.
 - Poste entre **terça e quinta, 8h–10h** (horário de Brasília).
 - Nas primeiras 2 horas, responda **todos** os comentários.
-- Imagem: use `dashboard.png` ou monte um carrossel de 3 slides (problema → board → dashboard). Tamanho 1200×627 ou 1080×1350.
+- Imagem: use `docs/social/linkedin-post.png` (1200×627, já pronta) ou monte um carrossel de 3 slides (problema → board → dashboard).
 
 ### Post 1 — Lançamento (o mais importante)
 
@@ -159,10 +159,12 @@ Feedback é muito bem-vindo, principalmente de quem contrata dev júnior.
 
 ```text
 🔗 Demo: https://SEU-APP.onrender.com
-💻 Código: https://github.com/SEU-USUARIO/devtrack
+💻 Código: https://github.com/LeoEnzo/devtrack
 
 Conta demo: demo@devtrack.dev / devtrack123
 ```
+
+> Imagens prontas para o post e para o banner do perfil: `docs/social/linkedin-post.png` e `docs/social/linkedin-banner.png` (fontes em `.html` na mesma pasta).
 
 ### Post 2 — Técnico (para ser visto como dev, não só como “entusiasta”)
 

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 627px; overflow: hidden; }
+  body {
+    font-family: "Segoe UI", "Inter", system-ui, sans-serif;
+    background: #0a1020;
+    color: #e8eefc;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .glow-a, .glow-b {
+    position: absolute; border-radius: 50%; filter: blur(90px); opacity: .55;
+  }
+  .glow-a { width: 520px; height: 520px; background: #2563eb; left: -180px; top: -180px; }
+  .glow-b { width: 620px; height: 620px; background: #0ea5a5; right: -220px; bottom: -260px; opacity: .35; }
+
+  .left { position: relative; z-index: 2; width: 560px; padding-left: 64px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; letter-spacing: .18em; font-weight: 700;
+    color: #93c5fd; text-transform: uppercase;
+    border: 1px solid rgba(147,197,253,.35);
+    background: rgba(37,99,235,.12);
+    padding: 7px 14px; border-radius: 999px;
+  }
+  .badge i { width: 6px; height: 6px; border-radius: 50%; background: #38bdf8; display: block; }
+  h1 {
+    font-size: 92px; line-height: .95; letter-spacing: -0.045em;
+    font-weight: 800; margin: 26px 0 18px;
+  }
+  h1 span { color: #38bdf8; }
+  p.sub {
+    font-size: 24px; line-height: 1.35; color: #b6c4de; max-width: 480px;
+    font-weight: 400;
+  }
+  .chips { display: flex; gap: 10px; margin-top: 34px; flex-wrap: wrap; }
+  .chip {
+    font-size: 15px; font-weight: 600; color: #d7e3f8;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.12);
+    padding: 8px 14px; border-radius: 10px;
+  }
+  .right { position: relative; z-index: 2; flex: 1; padding-right: 56px; }
+  .frame {
+    border-radius: 16px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,.16);
+    box-shadow: 0 34px 80px rgba(0,0,0,.62), 0 0 0 8px rgba(255,255,255,.03);
+    background: #0f172a;
+    transform: perspective(1400px) rotateY(-7deg) rotateX(2deg);
+  }
+  .bar {
+    height: 34px; display: flex; align-items: center; gap: 7px;
+    padding: 0 14px; background: #111c33; border-bottom: 1px solid rgba(255,255,255,.07);
+  }
+  .bar i { width: 10px; height: 10px; border-radius: 50%; display: block; }
+  .bar i:nth-child(1) { background: #f87171; }
+  .bar i:nth-child(2) { background: #fbbf24; }
+  .bar i:nth-child(3) { background: #34d399; }
+  .frame img { display: block; width: 100%; height: auto; }
+  .stamp {
+    position: absolute; right: 92px; bottom: 26px; z-index: 3;
+    font-size: 13px; letter-spacing: .2em; text-transform: uppercase;
+    color: rgba(226,232,240,.5); font-weight: 700;
+  }
+</style>
+</head>
+<body>
+  <div class="glow-a"></div>
+  <div class="glow-b"></div>
+
+  <div class="left">
+    <div class="badge"><i></i>Projeto de portfólio</div>
+    <h1>Dev<span>Track</span></h1>
+    <p class="sub">Candidaturas, entrevistas e follow-ups em um kanban — com dashboard de funil e taxa de resposta.</p>
+    <div class="chips">
+      <div class="chip">React 19</div>
+      <div class="chip">TypeScript</div>
+      <div class="chip">Node.js</div>
+      <div class="chip">SQLite</div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="frame">
+      <div class="bar"><i></i><i></i><i></i></div>
+      <img src="../screenshots/dashboard.png" alt="Dashboard do DevTrack" />
+    </div>
+  </div>
+
+  <div class="stamp">devtrack · demo ao vivo</div>
+</body>
+</html>

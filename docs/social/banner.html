@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1584px; height: 396px; overflow: hidden; }
+  body {
+    font-family: "Segoe UI", "Inter", system-ui, sans-serif;
+    background: #0a1020;
+    color: #e8eefc;
+    position: relative;
+  }
+  .glow-a, .glow-b { position: absolute; border-radius: 50%; filter: blur(90px); }
+  .glow-a { width: 620px; height: 620px; background: #2563eb; opacity: .5; left: 120px; top: -320px; }
+  .glow-b { width: 560px; height: 560px; background: #0ea5a5; opacity: .3; right: -140px; bottom: -300px; }
+  .grid {
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: linear-gradient(to right, transparent 0%, black 35%, black 100%);
+  }
+  .content { position: relative; z-index: 2; padding: 62px 0 0 300px; }
+  .kicker { font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: #7dd3fc; font-weight: 700; }
+  h1 { font-size: 62px; letter-spacing: -0.04em; font-weight: 800; margin: 12px 0 10px; }
+  h1 span { color: #38bdf8; }
+  p { font-size: 20px; color: #a9b8d3; }
+  .chips { display: flex; gap: 9px; margin-top: 26px; }
+  .chip {
+    font-size: 13px; font-weight: 600; color: #d7e3f8;
+    background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.12);
+    padding: 6px 12px; border-radius: 8px;
+  }
+  .shot {
+    position: absolute; right: 54px; bottom: -84px; width: 660px;
+    border-radius: 12px 12px 0 0; overflow: hidden;
+    border: 1px solid rgba(255,255,255,.14);
+    box-shadow: 0 24px 60px rgba(0,0,0,.6);
+    transform: rotate(-3deg);
+    z-index: 1; opacity: .95;
+  }
+  .shot img { display: block; width: 100%; }
+</style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="glow-a"></div>
+  <div class="glow-b"></div>
+
+  <div class="content">
+    <div class="kicker">Full stack · React + Node</div>
+    <h1>Dev<span>Track</span></h1>
+    <p>Rastreie candidaturas, entrevistas e follow-ups.</p>
+    <div class="chips">
+      <div class="chip">React 19</div>
+      <div class="chip">TypeScript</div>
+      <div class="chip">Node.js</div>
+      <div class="chip">SQLite</div>
+    </div>
+  </div>
+
+  <div class="shot"><img src="../screenshots/board.png" alt="" /></div>
+</body>
+</html>
